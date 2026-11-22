@@ -33,9 +33,9 @@
       "confidence": 88,
       "risk": "Medium",
       "route": "HITL REQUIRED",
-      "toolPath": "Atlas → Nitro → Explore",
+      "toolPath": "Atlas \u2192 Nitro \u2192 Explore",
       "lastSuccess": "18 Nov 2026",
-      "baseline": "18–25 posts/week",
+      "baseline": "18\u201325 posts/week",
       "observed": "0 new items / 4 days",
       "reachability": "Healthy",
       "extraction": "Content accessible",
@@ -70,9 +70,9 @@
       "confidence": 94,
       "risk": "Low",
       "route": "AUTO-FIX + VERIFY",
-      "toolPath": "Nitro → Explore",
+      "toolPath": "Nitro \u2192 Explore",
       "lastSuccess": "20 Nov 2026",
-      "baseline": "220–280 articles/day",
+      "baseline": "220\u2013280 articles/day",
       "observed": "URLs found; body extraction success 31%",
       "reachability": "Healthy",
       "extraction": "Degraded",
@@ -107,9 +107,9 @@
       "confidence": 97,
       "risk": "Low",
       "route": "AUTO-FIX + VERIFY",
-      "toolPath": "Atlas → Ingestion → Explore",
+      "toolPath": "Atlas \u2192 Ingestion \u2192 Explore",
       "lastSuccess": "21 Nov 2026",
-      "baseline": "35–55 articles/day",
+      "baseline": "35\u201355 articles/day",
       "observed": "Extraction succeeds; downstream count dropped 76%",
       "reachability": "Healthy",
       "extraction": "Healthy",
@@ -144,7 +144,7 @@
       "confidence": 82,
       "risk": "Medium",
       "route": "HITL REQUIRED",
-      "toolPath": "Atlas → Nitro → Explore",
+      "toolPath": "Atlas \u2192 Nitro \u2192 Explore",
       "lastSuccess": "21 Nov 2026",
       "baseline": "High-frequency multilingual publisher",
       "observed": "Language/date mapping inconsistent on recent sample",
@@ -181,7 +181,7 @@
       "confidence": 91,
       "risk": "High",
       "route": "ENGINEERING ESCALATION",
-      "toolPath": "Engineering / Wrapidity → Explore",
+      "toolPath": "Engineering / Wrapidity \u2192 Explore",
       "lastSuccess": "19 Nov 2026",
       "baseline": "High-frequency national publisher",
       "observed": "Intermittent access / anti-bot response in diagnostic sample",
@@ -202,39 +202,223 @@
     }
   ],
   "causes": [
-    {"n": 1, "name": "Source Unreachable / Offline", "desc": "Domain dead, DNS/HTTP failure, redirect loop or sustained outage."},
-    {"n": 2, "name": "Access / Blocking Issue", "desc": "Anti-bot, login wall, geo restriction, robots or rate limiting."},
-    {"n": 3, "name": "Article Discovery Failure", "desc": "Source is live but new article/post URLs are no longer discovered."},
-    {"n": 4, "name": "Extraction / Template Break", "desc": "Content found but title/body/date extraction fails after template change."},
-    {"n": 5, "name": "Metadata Failure", "desc": "Wrong or missing date, author, language, headline or media-type mapping."},
-    {"n": 6, "name": "Source Configuration / Mapping Issue", "desc": "Wrong URL, duplicate source, country/language/channel or canonical mapping."},
-    {"n": 7, "name": "Ingestion Pipeline Failure", "desc": "Extraction succeeds but items fail to reach downstream ingestion / Explore."},
-    {"n": 8, "name": "Legitimate Low Activity / False Alarm", "desc": "Source simply published less; no actual technical break exists."}
+    {
+      "n": 1,
+      "name": "Source Unreachable / Offline",
+      "desc": "Domain dead, DNS/HTTP failure, redirect loop or sustained outage."
+    },
+    {
+      "n": 2,
+      "name": "Access / Blocking Issue",
+      "desc": "Anti-bot, login wall, geo restriction, robots or rate limiting."
+    },
+    {
+      "n": 3,
+      "name": "Article Discovery Failure",
+      "desc": "Source is live but new article/post URLs are no longer discovered."
+    },
+    {
+      "n": 4,
+      "name": "Extraction / Template Break",
+      "desc": "Content found but title/body/date extraction fails after template change."
+    },
+    {
+      "n": 5,
+      "name": "Metadata Failure",
+      "desc": "Wrong or missing date, author, language, headline or media-type mapping."
+    },
+    {
+      "n": 6,
+      "name": "Source Configuration / Mapping Issue",
+      "desc": "Wrong URL, duplicate source, country/language/channel or canonical mapping."
+    },
+    {
+      "n": 7,
+      "name": "Ingestion Pipeline Failure",
+      "desc": "Extraction succeeds but items fail to reach downstream ingestion / Explore."
+    },
+    {
+      "n": 8,
+      "name": "Legitimate Low Activity / False Alarm",
+      "desc": "Source simply published less; no actual technical break exists."
+    }
   ],
   "hitlQueue": [
-    {"id": "HITL-0421","doctorId": "DOC-MWG-0307","source": "MotoWagon","gapId": "GAP-IN-TAM-SOC-AUTO-0307","workType": "Repair Review","priority": "P0","confidence": 88,"arr": 780000,"recommendation": "Approve discovery repair","reason": "Article Discovery Failure","route": "Atlas + Nitro","status": "Needs review"},
-    {"id": "HITL-0418","doctorId": "DOC-YLE-0188","source": "Yle Uutiset","gapId": "GAP-FI-FIN-NEWS-GEN-0188","workType": "Mapping Review","priority": "P1","confidence": 82,"arr": 390000,"recommendation": "Review multilingual metadata mapping","reason": "Metadata Failure","route": "Atlas + Nitro","status": "Needs review"},
-    {"id": "HITL-0415","doctorId": null,"source": "Auto Talks Tamil","gapId": "GAP-IN-TAM-SOC-AUTO-0307","workType": "Activation Review","priority": "P1","confidence": 96,"arr": 780000,"recommendation": "Approve new-source induction","reason": "High-value missing candidate","route": "Atlas + Nitro","status": "Needs review"},
-    {"id": "HITL-0412","doctorId": null,"source": "AutoTrend Tamil","gapId": "GAP-IN-TAM-SOC-AUTO-0307","workType": "Activation Review","priority": "P2","confidence": 95,"arr": 560000,"recommendation": "Approve new-source induction","reason": "High gap relevance","route": "Atlas + Nitro","status": "Needs review"},
-    {"id": "HITL-0409","doctorId": null,"source": "Thanthi TV Motor","gapId": "GAP-IN-TAM-SOC-AUTO-0307","workType": "Premium / Brand Review","priority": "P2","confidence": 90,"arr": 420000,"recommendation": "Review and activate","reason": "Publisher-brand authority","route": "Atlas + Nitro","status": "Needs review"}
+    {
+      "id": "HITL-0421",
+      "doctorId": "DOC-MWG-0307",
+      "source": "MotoWagon",
+      "gapId": "GAP-IN-TAM-SOC-AUTO-0307",
+      "workType": "Repair Review",
+      "priority": "P0",
+      "confidence": 88,
+      "arr": 780000,
+      "recommendation": "Approve discovery repair",
+      "reason": "Article Discovery Failure",
+      "route": "Atlas + Nitro",
+      "status": "Needs review"
+    },
+    {
+      "id": "HITL-0418",
+      "doctorId": "DOC-YLE-0188",
+      "source": "Yle Uutiset",
+      "gapId": "GAP-FI-FIN-NEWS-GEN-0188",
+      "workType": "Mapping Review",
+      "priority": "P1",
+      "confidence": 82,
+      "arr": 390000,
+      "recommendation": "Review multilingual metadata mapping",
+      "reason": "Metadata Failure",
+      "route": "Atlas + Nitro",
+      "status": "Needs review"
+    },
+    {
+      "id": "HITL-0415",
+      "doctorId": null,
+      "source": "Auto Talks Tamil",
+      "gapId": "GAP-IN-TAM-SOC-AUTO-0307",
+      "workType": "Activation Review",
+      "priority": "P1",
+      "confidence": 96,
+      "arr": 780000,
+      "recommendation": "Approve new-source induction",
+      "reason": "High-value missing candidate",
+      "route": "Atlas + Nitro",
+      "status": "Needs review"
+    },
+    {
+      "id": "HITL-0412",
+      "doctorId": null,
+      "source": "AutoTrend Tamil",
+      "gapId": "GAP-IN-TAM-SOC-AUTO-0307",
+      "workType": "Activation Review",
+      "priority": "P2",
+      "confidence": 95,
+      "arr": 560000,
+      "recommendation": "Approve new-source induction",
+      "reason": "High gap relevance",
+      "route": "Atlas + Nitro",
+      "status": "Needs review"
+    },
+    {
+      "id": "HITL-0409",
+      "doctorId": null,
+      "source": "Thanthi TV Motor",
+      "gapId": "GAP-IN-TAM-SOC-AUTO-0307",
+      "workType": "Premium / Brand Review",
+      "priority": "P2",
+      "confidence": 90,
+      "arr": 420000,
+      "recommendation": "Review and activate",
+      "reason": "Publisher-brand authority",
+      "route": "Atlas + Nitro",
+      "status": "Needs review"
+    }
   ],
   "impact": {
-    "portfolio": {"coverageLift": 17,"newContentPct": 41,"mcpConfidenceLift": 19,"ticketReduction": 47,"arrProtected": 4800000,"expansion": 1600000,"opsSavings": 400000,"modeledImpact": 6800000,"roi": 8.4},
+    "portfolio": {
+      "coverageLift": 17,
+      "newContentPct": 41,
+      "mcpConfidenceLift": 19,
+      "ticketReduction": 47,
+      "arrProtected": 4800000,
+      "expansion": 1600000,
+      "opsSavings": 400000,
+      "modeledImpact": 6800000,
+      "roi": 8.4
+    },
     "selectedGap": {
-      "before": {"health": 62,"monthlyContent": 8400,"thinDemand": 246,"genaiCoverage": 61,"mcpConfidence": 72,"tickets": 34,"arrExposure": 780000},
-      "actions": {"added": 6,"repaired": 2,"hitl": 1},
-      "after": {"health": 79,"monthlyContent": 13700,"thinDemand": 118,"genaiCoverage": 89,"mcpConfidence": 91,"tickets": 18,"arrAddressed": 620000}
+      "before": {
+        "health": 62,
+        "monthlyContent": 8400,
+        "thinDemand": 246,
+        "genaiCoverage": 61,
+        "mcpConfidence": 72,
+        "tickets": 34,
+        "arrExposure": 780000
+      },
+      "actions": {
+        "added": 6,
+        "repaired": 2,
+        "hitl": 1
+      },
+      "after": {
+        "health": 79,
+        "monthlyContent": 13700,
+        "thinDemand": 118,
+        "genaiCoverage": 89,
+        "mcpConfidence": 91,
+        "tickets": 18,
+        "arrAddressed": 620000
+      }
     },
     "products": [
-      {"name": "Explore","metric": "+41%","label": "relevant content","detail": "Broader Tamil automotive coverage, fewer thin searches and stronger freshness."},
-      {"name": "Trends","metric": "+23 pts","label": "regional confidence","detail": "More representative topic rankings and reduced coverage-driven low-volume distortion."},
-      {"name": "Analyze","metric": "+18%","label": "dataset completeness","detail": "More complete share-of-voice, competitor and regional analysis datasets."},
-      {"name": "Media Relations","metric": "+186","label": "journalists discovered","detail": "New authoritative outlets create additional author, journalist, beat and outlet intelligence."},
-      {"name": "GenAI Lens","metric": "+28 pts","label": "citation coverage","detail": "More externally cited authoritative sources become available inside Meltwater coverage."},
-      {"name": "MCP","metric": "+19 pts","label": "evidence confidence","detail": "More authoritative, local-language and fresh evidence improves answer confidence."}
+      {
+        "name": "Explore",
+        "metric": "+41%",
+        "label": "relevant content",
+        "detail": "Broader Tamil automotive coverage, fewer thin searches and stronger freshness."
+      },
+      {
+        "name": "Trends",
+        "metric": "+23 pts",
+        "label": "regional confidence",
+        "detail": "More representative topic rankings and reduced coverage-driven low-volume distortion."
+      },
+      {
+        "name": "Analyze",
+        "metric": "+18%",
+        "label": "dataset completeness",
+        "detail": "More complete share-of-voice, competitor and regional analysis datasets."
+      },
+      {
+        "name": "Media Relations",
+        "metric": "+186",
+        "label": "journalists discovered",
+        "detail": "New authoritative outlets create additional author, journalist, beat and outlet intelligence."
+      },
+      {
+        "name": "GenAI Lens",
+        "metric": "+28 pts",
+        "label": "citation coverage",
+        "detail": "More externally cited authoritative sources become available inside Meltwater coverage."
+      },
+      {
+        "name": "MCP",
+        "metric": "+19 pts",
+        "label": "evidence confidence",
+        "detail": "More authoritative, local-language and fresh evidence improves answer confidence."
+      }
     ],
-    "mcp": {"docsBefore": 42,"docsAfter": 138,"sourcesBefore": 18,"sourcesAfter": 47,"localBefore": 7,"localAfter": 31,"freshBefore": 74,"freshAfter": 95,"confidenceBefore": 72,"confidenceAfter": 91},
-    "ops": {"ticketsBefore": 420,"ticketsAfter": 275,"premiumBefore": 86,"premiumAfter": 39,"hoursBefore": 310,"hoursAfter": 148,"resolutionBefore": 3.8,"resolutionAfter": 1.4,"autoResolved": 58},
-    "media": {"newOutlets": 47,"journalists": 186,"enriched": 324,"beats": 73,"regional": 21}
+    "mcp": {
+      "docsBefore": 42,
+      "docsAfter": 138,
+      "sourcesBefore": 18,
+      "sourcesAfter": 47,
+      "localBefore": 7,
+      "localAfter": 31,
+      "freshBefore": 74,
+      "freshAfter": 95,
+      "confidenceBefore": 72,
+      "confidenceAfter": 91
+    },
+    "ops": {
+      "ticketsBefore": 420,
+      "ticketsAfter": 275,
+      "premiumBefore": 86,
+      "premiumAfter": 39,
+      "hoursBefore": 310,
+      "hoursAfter": 148,
+      "resolutionBefore": 3.8,
+      "resolutionAfter": 1.4,
+      "autoResolved": 58
+    },
+    "media": {
+      "newOutlets": 47,
+      "journalists": 186,
+      "enriched": 324,
+      "beats": 73,
+      "regional": 21
+    }
   }
 }

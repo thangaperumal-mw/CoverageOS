@@ -1,6 +1,525 @@
 {
   "scenarios": [
     {
+      "gapId": "GAP-IN-TAM-NEWS-GEN-0241",
+      "country": "India",
+      "iso": "IND",
+      "region": "South Asia",
+      "language": "Tamil",
+      "channel": "News",
+      "category": "General News",
+      "phase1": {
+        "health": 62,
+        "opportunity": 92,
+        "unhealthy": 445,
+        "thinDemand": 246,
+        "genai": 318,
+        "premium": 12,
+        "arr": 780000,
+        "trendAvg": 82.4,
+        "trendLow": 128,
+        "trendZero": 18
+      },
+      "projected": {
+        "healthAfter": 74,
+        "newArticlesMonthly": 12400,
+        "zeroThinReduction": 21,
+        "arrAddressed": 610000
+      },
+      "candidates": [
+        {
+          "id": "HTT",
+          "rank": 1,
+          "name": "Hindu Tamil Thisai",
+          "domain": "hindutamil.in",
+          "url": "https://www.hindutamil.in/",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "News",
+          "category": "General / Business / Auto",
+          "action": "ADD",
+          "score": 94,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "High-authority Tamil publisher with strong regional and topical fit; closes a high-opportunity Tamil news gap.",
+          "factors": {
+            "Authority & Credibility": 97,
+            "Coverage Gap Relevance": 98,
+            "Unique Content Value": 92,
+            "Customer & Commercial Demand": 91,
+            "GenAI / Product Evidence": 94,
+            "Content Volume & Freshness": 95,
+            "Ingestion Feasibility": 84
+          },
+          "evidence": [
+            "Public Tamil daily from The Hindu Group",
+            "Regional, national and international Tamil coverage",
+            "Business, personal finance and automotive sections"
+          ],
+          "lift": 6,
+          "confidence": 96
+        },
+        {
+          "id": "DMR",
+          "rank": 2,
+          "name": "Dinamalar",
+          "domain": "dinamalar.com",
+          "url": "https://www.dinamalar.com/",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "News",
+          "category": "General News",
+          "action": "FIX",
+          "score": 91,
+          "atlas": "Existing — unhealthy in demo snapshot",
+          "reason": "Authoritative Tamil source already represented in the source master; SourceScout detects duplication risk and routes the health issue to Source Doctor.",
+          "factors": {
+            "Authority & Credibility": 95,
+            "Coverage Gap Relevance": 97,
+            "Unique Content Value": 88,
+            "Customer & Commercial Demand": 92,
+            "GenAI / Product Evidence": 86,
+            "Content Volume & Freshness": 96,
+            "Ingestion Feasibility": 82
+          },
+          "evidence": [
+            "Active Tamil news publisher",
+            "Strong Tamil Nadu regional footprint",
+            "Existing-source health signal prevents duplicate induction"
+          ],
+          "lift": 5,
+          "confidence": 95
+        },
+        {
+          "id": "DNM",
+          "rank": 3,
+          "name": "Dinamani",
+          "domain": "dinamani.com",
+          "url": "https://www.dinamani.com/",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "News",
+          "category": "General / Business",
+          "action": "ADD",
+          "score": 88,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "High-frequency Tamil publisher with multiple regional editions and broad general-news coverage.",
+          "factors": {
+            "Authority & Credibility": 91,
+            "Coverage Gap Relevance": 94,
+            "Unique Content Value": 86,
+            "Customer & Commercial Demand": 84,
+            "GenAI / Product Evidence": 82,
+            "Content Volume & Freshness": 93,
+            "Ingestion Feasibility": 86
+          },
+          "evidence": [
+            "Tamil news publisher with regional editions",
+            "Broad breaking-news and state coverage",
+            "Publicly active web property"
+          ],
+          "lift": 4,
+          "confidence": 91
+        },
+        {
+          "id": "THT",
+          "rank": 4,
+          "name": "Thanthi TV",
+          "domain": "thanthitv.com",
+          "url": "https://www.thanthitv.com/",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "News",
+          "category": "Broadcast / Breaking News",
+          "action": "WATCH",
+          "score": 81,
+          "atlas": "Unknown in demo snapshot",
+          "reason": "Strong Tamil broadcast presence, but candidate requires feed-structure and duplication review before induction.",
+          "factors": {
+            "Authority & Credibility": 88,
+            "Coverage Gap Relevance": 90,
+            "Unique Content Value": 76,
+            "Customer & Commercial Demand": 78,
+            "GenAI / Product Evidence": 80,
+            "Content Volume & Freshness": 94,
+            "Ingestion Feasibility": 60
+          },
+          "evidence": [
+            "Tamil broadcast-news property",
+            "High breaking-news cadence",
+            "Requires technical feasibility review"
+          ],
+          "lift": 3,
+          "confidence": 79
+        }
+      ]
+    },
+    {
+      "gapId": "GAP-NL-NL-NEWS-AUTO-0118",
+      "country": "Netherlands",
+      "iso": "NLD",
+      "region": "Europe",
+      "language": "Dutch",
+      "channel": "News",
+      "category": "Automotive",
+      "phase1": {
+        "health": 26.4,
+        "opportunity": 95,
+        "unhealthy": 312,
+        "thinDemand": 170,
+        "genai": 221,
+        "premium": 9,
+        "arr": 920000,
+        "trendAvg": 26.4,
+        "trendLow": 170,
+        "trendZero": 48
+      },
+      "projected": {
+        "healthAfter": 49,
+        "newArticlesMonthly": 5300,
+        "zeroThinReduction": 28,
+        "arrAddressed": 760000
+      },
+      "candidates": [
+        {
+          "id": "AWNL",
+          "rank": 1,
+          "name": "AutoWeek",
+          "domain": "autoweek.nl",
+          "url": "https://www.autoweek.nl/",
+          "location": "Netherlands",
+          "language": "Dutch",
+          "channel": "News",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 96,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "High-volume Dutch automotive publisher with news, tests, guides and forum activity; directly fits the gap.",
+          "factors": {
+            "Authority & Credibility": 96,
+            "Coverage Gap Relevance": 99,
+            "Unique Content Value": 94,
+            "Customer & Commercial Demand": 95,
+            "GenAI / Product Evidence": 91,
+            "Content Volume & Freshness": 97,
+            "Ingestion Feasibility": 91
+          },
+          "evidence": [
+            "Active Dutch automotive news publisher",
+            "Frequent automotive news and tests",
+            "Strong topical specificity"
+          ],
+          "lift": 9,
+          "confidence": 98
+        },
+        {
+          "id": "ABNL",
+          "rank": 2,
+          "name": "Autoblog.nl",
+          "domain": "autoblog.nl",
+          "url": "https://www.autoblog.nl/",
+          "location": "Netherlands",
+          "language": "Dutch",
+          "channel": "News",
+          "category": "Automotive",
+          "action": "FIX",
+          "score": 92,
+          "atlas": "Existing — recent ingestion drop in demo snapshot",
+          "reason": "Strong Dutch automotive fit, but already exists in the demo source master; route to Source Doctor instead of duplicating.",
+          "factors": {
+            "Authority & Credibility": 92,
+            "Coverage Gap Relevance": 98,
+            "Unique Content Value": 90,
+            "Customer & Commercial Demand": 88,
+            "GenAI / Product Evidence": 90,
+            "Content Volume & Freshness": 97,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "Active Dutch automotive publisher",
+            "High posting cadence",
+            "Existing-source signal triggers Phase 3"
+          ],
+          "lift": 7,
+          "confidence": 96
+        },
+        {
+          "id": "AVNL",
+          "rank": 3,
+          "name": "AutoVisie",
+          "domain": "autovisie.nl",
+          "url": "https://www.autovisie.nl/",
+          "location": "Netherlands",
+          "language": "Dutch",
+          "channel": "News",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 86,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Relevant Dutch automotive publisher that improves publisher diversity and local market depth.",
+          "factors": {
+            "Authority & Credibility": 90,
+            "Coverage Gap Relevance": 92,
+            "Unique Content Value": 86,
+            "Customer & Commercial Demand": 81,
+            "GenAI / Product Evidence": 79,
+            "Content Volume & Freshness": 85,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "Dutch automotive editorial source",
+            "Local-market relevance",
+            "Useful publisher diversity"
+          ],
+          "lift": 5,
+          "confidence": 89
+        }
+      ]
+    },
+    {
+      "gapId": "GAP-FI-FI-NEWS-GEN-0081",
+      "country": "Finland",
+      "iso": "FIN",
+      "region": "Europe",
+      "language": "Finnish",
+      "channel": "News",
+      "category": "General News",
+      "phase1": {
+        "health": 24.6,
+        "opportunity": 97,
+        "unhealthy": 269,
+        "thinDemand": 169,
+        "genai": 197,
+        "premium": 8,
+        "arr": 840000,
+        "trendAvg": 24.6,
+        "trendLow": 169,
+        "trendZero": 39
+      },
+      "projected": {
+        "healthAfter": 51,
+        "newArticlesMonthly": 8600,
+        "zeroThinReduction": 31,
+        "arrAddressed": 700000
+      },
+      "candidates": [
+        {
+          "id": "YLE",
+          "rank": 1,
+          "name": "Yle Uutiset",
+          "domain": "yle.fi",
+          "url": "https://yle.fi/news",
+          "location": "Finland",
+          "language": "Finnish / Swedish / English",
+          "channel": "News",
+          "category": "General News",
+          "action": "FIX",
+          "score": 97,
+          "atlas": "Existing — degraded in demo snapshot",
+          "reason": "National public-service news source with multilingual output; existing-source health issue should go directly to Source Doctor.",
+          "factors": {
+            "Authority & Credibility": 99,
+            "Coverage Gap Relevance": 99,
+            "Unique Content Value": 97,
+            "Customer & Commercial Demand": 94,
+            "GenAI / Product Evidence": 95,
+            "Content Volume & Freshness": 98,
+            "Ingestion Feasibility": 92
+          },
+          "evidence": [
+            "Finnish public-service news publisher",
+            "Multilingual output",
+            "High-frequency national coverage"
+          ],
+          "lift": 10,
+          "confidence": 99
+        },
+        {
+          "id": "HSFI",
+          "rank": 2,
+          "name": "Helsingin Sanomat",
+          "domain": "hs.fi",
+          "url": "https://www.hs.fi/",
+          "location": "Finland",
+          "language": "Finnish",
+          "channel": "News",
+          "category": "General News",
+          "action": "ADD",
+          "score": 94,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Major Finnish subscription newspaper with strong national relevance and unique local reporting.",
+          "factors": {
+            "Authority & Credibility": 98,
+            "Coverage Gap Relevance": 97,
+            "Unique Content Value": 96,
+            "Customer & Commercial Demand": 91,
+            "GenAI / Product Evidence": 93,
+            "Content Volume & Freshness": 94,
+            "Ingestion Feasibility": 82
+          },
+          "evidence": [
+            "Major Finnish newspaper",
+            "Strong national reporting",
+            "High uniqueness for local coverage"
+          ],
+          "lift": 8,
+          "confidence": 95
+        },
+        {
+          "id": "ILFI",
+          "rank": 3,
+          "name": "Iltalehti",
+          "domain": "iltalehti.fi",
+          "url": "https://www.iltalehti.fi/",
+          "location": "Finland",
+          "language": "Finnish",
+          "channel": "News",
+          "category": "General News",
+          "action": "ADD",
+          "score": 89,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "High-frequency Finnish news source that adds breadth and freshness to thin-result categories.",
+          "factors": {
+            "Authority & Credibility": 88,
+            "Coverage Gap Relevance": 94,
+            "Unique Content Value": 84,
+            "Customer & Commercial Demand": 86,
+            "GenAI / Product Evidence": 87,
+            "Content Volume & Freshness": 97,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "Active Finnish news publisher",
+            "High publishing cadence",
+            "Strong local-language fit"
+          ],
+          "lift": 6,
+          "confidence": 91
+        }
+      ]
+    },
+    {
+      "gapId": "GAP-SE-SV-NEWS-GEN-0132",
+      "country": "Sweden",
+      "iso": "SWE",
+      "region": "Europe",
+      "language": "Swedish",
+      "channel": "News",
+      "category": "General News",
+      "phase1": {
+        "health": 35.9,
+        "opportunity": 93,
+        "unhealthy": 241,
+        "thinDemand": 162,
+        "genai": 203,
+        "premium": 7,
+        "arr": 730000,
+        "trendAvg": 35.9,
+        "trendLow": 162,
+        "trendZero": 38
+      },
+      "projected": {
+        "healthAfter": 57,
+        "newArticlesMonthly": 7400,
+        "zeroThinReduction": 24,
+        "arrAddressed": 610000
+      },
+      "candidates": [
+        {
+          "id": "SVT",
+          "rank": 1,
+          "name": "SVT Nyheter",
+          "domain": "svt.se/nyheter",
+          "url": "https://www.svt.se/nyheter",
+          "location": "Sweden",
+          "language": "Swedish",
+          "channel": "News",
+          "category": "General News",
+          "action": "ADD",
+          "score": 96,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "National public-service news publisher with high authority, freshness and geographic relevance.",
+          "factors": {
+            "Authority & Credibility": 99,
+            "Coverage Gap Relevance": 99,
+            "Unique Content Value": 95,
+            "Customer & Commercial Demand": 92,
+            "GenAI / Product Evidence": 94,
+            "Content Volume & Freshness": 97,
+            "Ingestion Feasibility": 89
+          },
+          "evidence": [
+            "Swedish public-service news",
+            "National and regional reporting",
+            "High freshness"
+          ],
+          "lift": 9,
+          "confidence": 98
+        },
+        {
+          "id": "AFT",
+          "rank": 2,
+          "name": "Aftonbladet",
+          "domain": "aftonbladet.se",
+          "url": "https://www.aftonbladet.se/",
+          "location": "Sweden",
+          "language": "Swedish",
+          "channel": "News",
+          "category": "General News",
+          "action": "FIX",
+          "score": 92,
+          "atlas": "Existing — unhealthy in demo snapshot",
+          "reason": "High-demand Swedish publisher already represented in Atlas; repair path is more appropriate than re-induction.",
+          "factors": {
+            "Authority & Credibility": 92,
+            "Coverage Gap Relevance": 97,
+            "Unique Content Value": 87,
+            "Customer & Commercial Demand": 94,
+            "GenAI / Product Evidence": 91,
+            "Content Volume & Freshness": 98,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "National Swedish news publisher",
+            "High publishing cadence",
+            "Existing source requires health diagnosis"
+          ],
+          "lift": 7,
+          "confidence": 96
+        },
+        {
+          "id": "DNSE",
+          "rank": 3,
+          "name": "Dagens Nyheter",
+          "domain": "dn.se",
+          "url": "https://www.dn.se/",
+          "location": "Sweden",
+          "language": "Swedish",
+          "channel": "News",
+          "category": "General News",
+          "action": "ADD",
+          "score": 90,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Authoritative national Swedish newspaper that improves local-language depth and source diversity.",
+          "factors": {
+            "Authority & Credibility": 97,
+            "Coverage Gap Relevance": 94,
+            "Unique Content Value": 94,
+            "Customer & Commercial Demand": 85,
+            "GenAI / Product Evidence": 88,
+            "Content Volume & Freshness": 91,
+            "Ingestion Feasibility": 80
+          },
+          "evidence": [
+            "National Swedish newspaper",
+            "Strong original reporting",
+            "High source-diversity value"
+          ],
+          "lift": 6,
+          "confidence": 92
+        }
+      ]
+    },
+    {
       "gapId": "GAP-IN-TAM-SOC-AUTO-0307",
       "country": "India",
       "iso": "IND",
@@ -15,45 +534,48 @@
         "thinDemand": 246,
         "genai": 318,
         "premium": 12,
-        "arr": 780000
+        "arr": 780000,
+        "trendAvg": 82.4,
+        "trendLow": 128,
+        "trendZero": 18
       },
       "projected": {
-        "healthAfter": 79,
-        "newArticlesMonthly": 5300,
-        "zeroThinReduction": 52,
-        "arrAddressed": 620000
+        "healthAfter": 73,
+        "newArticlesMonthly": 4200,
+        "zeroThinReduction": 16,
+        "arrAddressed": 560000
       },
       "candidates": [
         {
           "id": "ATT",
           "rank": 1,
           "name": "Auto Talks Tamil",
-          "domain": "youtube.com/@AutoTalksTamil",
-          "url": "https://www.youtube.com/@AutoTalksTamil",
+          "domain": "youtube.com/@Autotalkstamil",
+          "url": "https://www.youtube.com/@Autotalkstamil",
           "location": "Tamil Nadu, India",
           "language": "Tamil",
           "channel": "Social Media",
           "category": "Automotive",
           "action": "ADD",
-          "score": 96,
+          "score": 95,
           "atlas": "Not found in demo Atlas snapshot",
-          "reason": "Strong Tamil automotive fit with original reviews and locally relevant vehicle content.",
+          "reason": "Tamil-first automotive channel with strong fit for launches, reviews, events and practical explainers.",
           "factors": {
-            "Authority & Credibility": 95,
+            "Authority & Credibility": 88,
             "Coverage Gap Relevance": 99,
             "Unique Content Value": 94,
-            "Customer & Commercial Demand": 95,
-            "GenAI / Product Evidence": 93,
-            "Content Volume & Freshness": 96,
-            "Ingestion Feasibility": 94
+            "Customer & Commercial Demand": 91,
+            "GenAI / Product Evidence": 88,
+            "Content Volume & Freshness": 95,
+            "Ingestion Feasibility": 97
           },
           "evidence": [
-            "Tamil-first automotive channel",
-            "Strong local vehicle coverage",
-            "High gap relevance"
+            "Public Tamil automotive channel",
+            "Cars, bikes, launches, events and practical tips",
+            "High language and category relevance"
           ],
-          "lift": 8,
-          "confidence": 97
+          "lift": 4,
+          "confidence": 96
         },
         {
           "id": "MWG",
@@ -68,209 +590,300 @@
           "action": "FIX",
           "score": 94,
           "atlas": "Existing — unhealthy in demo snapshot",
-          "reason": "Authoritative Tamil automotive source already represented in the source master; SourceScout avoids duplicate induction and routes the health issue to Source Doctor.",
+          "reason": "High-value Tamil automotive source; de-duplication finds it already represented, so repairing health is higher-value than re-induction.",
           "factors": {
             "Authority & Credibility": 95,
-            "Coverage Gap Relevance": 98,
-            "Unique Content Value": 93,
-            "Customer & Commercial Demand": 94,
+            "Coverage Gap Relevance": 99,
+            "Unique Content Value": 95,
+            "Customer & Commercial Demand": 92,
             "GenAI / Product Evidence": 91,
             "Content Volume & Freshness": 94,
-            "Ingestion Feasibility": 90
+            "Ingestion Feasibility": 92
           },
           "evidence": [
-            "Public Tamil automotive channel",
-            "Existing-source signal prevents duplicate induction",
-            "Canonical Source Doctor handoff"
+            "Established Tamil automotive review channel",
+            "Large catalogue of vehicle reviews and consultations",
+            "Existing-source signal creates a direct Source Doctor case"
           ],
-          "lift": 7,
-          "confidence": 96
+          "lift": 5,
+          "confidence": 97
         },
         {
-          "id": "ATTM",
+          "id": "ATR",
           "rank": 3,
           "name": "AutoTrend Tamil",
-          "domain": "youtube.com/@AutoTrendTamil",
-          "url": "https://www.youtube.com/results?search_query=AutoTrend+Tamil",
+          "domain": "youtube.com/@autotrendtamil",
+          "url": "https://www.youtube.com/@autotrendtamil",
           "location": "Tamil Nadu, India",
           "language": "Tamil",
           "channel": "Social Media",
           "category": "Automotive",
           "action": "ADD",
-          "score": 93,
+          "score": 92,
           "atlas": "Not found in demo Atlas snapshot",
-          "reason": "High topical relevance and local-language value for the selected blind spot.",
+          "reason": "Tamil automotive channel with deep vehicle reviews, comparisons, launch coverage and ownership guidance.",
           "factors": {
             "Authority & Credibility": 91,
             "Coverage Gap Relevance": 98,
             "Unique Content Value": 91,
-            "Customer & Commercial Demand": 92,
-            "GenAI / Product Evidence": 90,
-            "Content Volume & Freshness": 92,
-            "Ingestion Feasibility": 93
+            "Customer & Commercial Demand": 88,
+            "GenAI / Product Evidence": 86,
+            "Content Volume & Freshness": 96,
+            "Ingestion Feasibility": 94
           },
           "evidence": [
-            "Tamil automotive focus",
-            "Local-market relevance",
-            "Adds source diversity"
+            "Tamil automotive reviews and comparisons",
+            "Vehicle launch and first-drive coverage",
+            "High publishing depth in Autos & Vehicles"
           ],
-          "lift": 6,
+          "lift": 4,
           "confidence": 95
         },
         {
           "id": "BMT",
           "rank": 4,
           "name": "BiN's MoTor Tamil",
-          "domain": "youtube.com",
-          "url": "https://www.youtube.com/results?search_query=BiN%27s+MoTor+Tamil",
-          "location": "Tamil Nadu, India",
-          "language": "Tamil",
-          "channel": "Social Media",
-          "category": "Automotive",
-          "action": "ADD",
-          "score": 91,
-          "atlas": "Not found in demo Atlas snapshot",
-          "reason": "Original Tamil automotive creator content improves local-language and creator coverage.",
-          "factors": {
-            "Authority & Credibility": 89,
-            "Coverage Gap Relevance": 96,
-            "Unique Content Value": 94,
-            "Customer & Commercial Demand": 89,
-            "GenAI / Product Evidence": 86,
-            "Content Volume & Freshness": 90,
-            "Ingestion Feasibility": 92
-          },
-          "evidence": [
-            "Original creator-led content",
-            "Tamil language fit",
-            "Automotive-specific coverage"
-          ],
-          "lift": 5,
-          "confidence": 93
-        },
-        {
-          "id": "TTM",
-          "rank": 5,
-          "name": "Thanthi TV Motor",
-          "domain": "youtube.com/@ThanthiTV",
-          "url": "https://www.youtube.com/@ThanthiTV",
-          "location": "Tamil Nadu, India",
-          "language": "Tamil",
-          "channel": "Social Media",
-          "category": "Automotive",
-          "action": "ADD",
-          "score": 90,
-          "atlas": "Not found in demo Atlas snapshot",
-          "reason": "Publisher-brand authority plus Tamil reach make this a useful automotive vertical candidate.",
-          "factors": {
-            "Authority & Credibility": 96,
-            "Coverage Gap Relevance": 91,
-            "Unique Content Value": 84,
-            "Customer & Commercial Demand": 90,
-            "GenAI / Product Evidence": 88,
-            "Content Volume & Freshness": 95,
-            "Ingestion Feasibility": 87
-          },
-          "evidence": [
-            "Established Tamil publisher brand",
-            "High reach and freshness",
-            "Useful automotive vertical evidence"
-          ],
-          "lift": 4,
-          "confidence": 92
-        },
-        {
-          "id": "DRV",
-          "rank": 6,
-          "name": "DriveVlog",
-          "domain": "youtube.com",
-          "url": "https://www.youtube.com/results?search_query=DriveVlog+Tamil",
-          "location": "Tamil Nadu, India",
+          "domain": "youtube.com/@BinsMoToRTamil",
+          "url": "https://www.youtube.com/@BinsMoToRTamil",
+          "location": "India",
           "language": "Tamil",
           "channel": "Social Media",
           "category": "Automotive",
           "action": "ADD",
           "score": 88,
           "atlas": "Not found in demo Atlas snapshot",
-          "reason": "Useful Tamil automotive creator candidate with strong gap relevance.",
+          "reason": "Focused Tamil car-and-bike source with reviews, variant comparisons and launch updates that adds specialist depth.",
           "factors": {
-            "Authority & Credibility": 84,
-            "Coverage Gap Relevance": 94,
-            "Unique Content Value": 91,
-            "Customer & Commercial Demand": 84,
-            "GenAI / Product Evidence": 82,
+            "Authority & Credibility": 82,
+            "Coverage Gap Relevance": 97,
+            "Unique Content Value": 88,
+            "Customer & Commercial Demand": 81,
+            "GenAI / Product Evidence": 78,
             "Content Volume & Freshness": 89,
+            "Ingestion Feasibility": 95
+          },
+          "evidence": [
+            "Tamil cars and bikes coverage",
+            "Reviews, variant comparisons and launch updates",
+            "Specialist language/category fit"
+          ],
+          "lift": 3,
+          "confidence": 91
+        },
+        {
+          "id": "TTM",
+          "rank": 5,
+          "name": "Thanthi TV Motor",
+          "domain": "youtube.com/@thanthitvmotor",
+          "url": "https://www.youtube.com/@thanthitvmotor",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 86,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Tamil automotive extension of a major media brand with frequent reviews, first looks and industry coverage.",
+          "factors": {
+            "Authority & Credibility": 90,
+            "Coverage Gap Relevance": 94,
+            "Unique Content Value": 84,
+            "Customer & Commercial Demand": 82,
+            "GenAI / Product Evidence": 80,
+            "Content Volume & Freshness": 90,
             "Ingestion Feasibility": 91
           },
           "evidence": [
-            "Tamil automotive creator",
-            "Original vehicle content",
-            "Good ingestion feasibility"
+            "Tamil automotive media channel",
+            "Reviews, road tests and new-vehicle coverage",
+            "Strong publisher-brand authority"
           ],
-          "lift": 4,
+          "lift": 3,
           "confidence": 90
+        },
+        {
+          "id": "DRV",
+          "rank": 6,
+          "name": "DriveVlog",
+          "domain": "drivevlog.in",
+          "url": "https://www.drivevlog.in/",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 84,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Multi-platform Tamil automotive media adds social-first launches, history, analysis and technology coverage.",
+          "factors": {
+            "Authority & Credibility": 82,
+            "Coverage Gap Relevance": 95,
+            "Unique Content Value": 88,
+            "Customer & Commercial Demand": 77,
+            "GenAI / Product Evidence": 76,
+            "Content Volume & Freshness": 83,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "Multi-platform Tamil automotive media",
+            "Active across Instagram, YouTube and Facebook",
+            "Automotive launches, analysis and technology content"
+          ],
+          "lift": 2,
+          "confidence": 88
         },
         {
           "id": "TAM",
           "rank": 7,
           "name": "Tamil Automobiles",
-          "domain": "youtube.com",
-          "url": "https://www.youtube.com/results?search_query=Tamil+Automobiles",
+          "domain": "youtube.com/@TamilAutomobiles",
+          "url": "https://www.youtube.com/@TamilAutomobiles",
           "location": "India",
           "language": "Tamil",
           "channel": "Social Media",
           "category": "Automotive",
           "action": "WATCH",
-          "score": 80,
-          "atlas": "Unknown in demo snapshot",
-          "reason": "Relevant candidate, but evidence quality and publishing continuity need more validation.",
+          "score": 81,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Relevant Tamil automotive source, but the demo evidence suggests lower authority and publishing depth than higher-ranked candidates.",
           "factors": {
             "Authority & Credibility": 75,
-            "Coverage Gap Relevance": 91,
-            "Unique Content Value": 82,
-            "Customer & Commercial Demand": 75,
-            "GenAI / Product Evidence": 76,
-            "Content Volume & Freshness": 74,
-            "Ingestion Feasibility": 88
+            "Coverage Gap Relevance": 95,
+            "Unique Content Value": 80,
+            "Customer & Commercial Demand": 73,
+            "GenAI / Product Evidence": 70,
+            "Content Volume & Freshness": 75,
+            "Ingestion Feasibility": 95
           },
           "evidence": [
-            "Topical relevance confirmed",
-            "Needs continuity validation",
-            "Watch before induction"
-          ],
-          "lift": 2,
-          "confidence": 81
-        },
-        {
-          "id": "HTY",
-          "rank": 8,
-          "name": "Hindu Tamil Thisai — YouTube",
-          "domain": "youtube.com/@HinduTamilThisai",
-          "url": "https://www.youtube.com/@HinduTamilThisai",
-          "location": "Tamil Nadu, India",
-          "language": "Tamil",
-          "channel": "Social Media",
-          "category": "News / Automotive",
-          "action": "WATCH",
-          "score": 78,
-          "atlas": "Unknown in demo snapshot",
-          "reason": "Strong publisher authority but automotive specificity is lower than dedicated candidates.",
-          "factors": {
-            "Authority & Credibility": 96,
-            "Coverage Gap Relevance": 72,
-            "Unique Content Value": 76,
-            "Customer & Commercial Demand": 78,
-            "GenAI / Product Evidence": 83,
-            "Content Volume & Freshness": 94,
-            "Ingestion Feasibility": 88
-          },
-          "evidence": [
-            "Established Tamil publisher",
-            "High freshness",
-            "Lower automotive specificity"
+            "Tamil automotive content",
+            "Vehicle reviews and explainers",
+            "Useful language relevance; additional authority evidence needed"
           ],
           "lift": 2,
           "confidence": 84
+        },
+        {
+          "id": "HTTYT",
+          "rank": 8,
+          "name": "Hindu Tamil Thisai — YouTube",
+          "domain": "youtube.com/@hindutamilthisai",
+          "url": "https://www.youtube.com/@hindutamilthisai",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "General / Business / Auto",
+          "action": "WATCH",
+          "score": 79,
+          "atlas": "Unknown in demo snapshot",
+          "reason": "High-authority Tamil publisher channel, but automotive specificity is lower than dedicated candidates.",
+          "factors": {
+            "Authority & Credibility": 96,
+            "Coverage Gap Relevance": 72,
+            "Unique Content Value": 82,
+            "Customer & Commercial Demand": 80,
+            "GenAI / Product Evidence": 86,
+            "Content Volume & Freshness": 93,
+            "Ingestion Feasibility": 92
+          },
+          "evidence": [
+            "Established Tamil publisher channel",
+            "High publisher authority",
+            "Lower automotive specificity than dedicated sources"
+          ],
+          "lift": 1,
+          "confidence": 82
+        }
+      ]
+    },
+    {
+      "gapId": "GAP-IN-EN-FORUM-AUTO-0339",
+      "country": "India",
+      "iso": "IND",
+      "region": "South Asia",
+      "language": "English",
+      "channel": "Forum",
+      "category": "Automotive",
+      "phase1": {
+        "health": 62,
+        "opportunity": 92,
+        "unhealthy": 445,
+        "thinDemand": 246,
+        "genai": 318,
+        "premium": 12,
+        "arr": 780000,
+        "trendAvg": 82.4,
+        "trendLow": 128,
+        "trendZero": 18
+      },
+      "projected": {
+        "healthAfter": 66,
+        "newArticlesMonthly": 2700,
+        "zeroThinReduction": 11,
+        "arrAddressed": 430000
+      },
+      "candidates": [
+        {
+          "id": "TBHP",
+          "rank": 1,
+          "name": "Team-BHP",
+          "domain": "team-bhp.com/forum",
+          "url": "https://www.team-bhp.com/forum/",
+          "location": "India",
+          "language": "English",
+          "channel": "Forum",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 97,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Highly relevant Indian automotive community with extensive original owner reviews, technical discussions and local-market intelligence.",
+          "factors": {
+            "Authority & Credibility": 96,
+            "Coverage Gap Relevance": 99,
+            "Unique Content Value": 99,
+            "Customer & Commercial Demand": 94,
+            "GenAI / Product Evidence": 95,
+            "Content Volume & Freshness": 96,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "Large Indian automotive forum",
+            "Millions of content-rich posts",
+            "Original owner and technical discussions"
+          ],
+          "lift": 7,
+          "confidence": 99
+        },
+        {
+          "id": "CARIND",
+          "rank": 2,
+          "name": "r/carIndia",
+          "domain": "reddit.com/r/carIndia",
+          "url": "https://www.reddit.com/r/carIndia/",
+          "location": "India",
+          "language": "English / multilingual",
+          "channel": "Reddit",
+          "category": "Automotive",
+          "action": "WATCH",
+          "score": 83,
+          "atlas": "Unknown in demo snapshot",
+          "reason": "Relevant growing Indian car community; useful demand signal but lower authority and structure than Team-BHP for this forum gap.",
+          "factors": {
+            "Authority & Credibility": 70,
+            "Coverage Gap Relevance": 94,
+            "Unique Content Value": 88,
+            "Customer & Commercial Demand": 79,
+            "GenAI / Product Evidence": 77,
+            "Content Volume & Freshness": 89,
+            "Ingestion Feasibility": 90
+          },
+          "evidence": [
+            "Active Indian car community",
+            "Buying and ownership discussions",
+            "Community-generated content"
+          ],
+          "lift": 3,
+          "confidence": 85
         }
       ]
     }

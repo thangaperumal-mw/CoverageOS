@@ -44,25 +44,67 @@
     </nav>
     <div class="demo-badge"><svg><use href="#i-info"/></svg> Demo (Illustrative Data)</div>
   </aside>
+
   <main class="main">
     <header class="topbar">
       <div class="title-block"><h1>Coverage <em>Intelligence</em> <svg class="title-info"><use href="#i-info"/></svg></h1><p>Global source health, demand and opportunity intelligence</p></div>
-      <div class="right-tools"><div class="filters">
-        <label class="filter"><svg><use href="#i-calendar"/></svg><span><small>Date Range</small><b id="dateLabel">Last 30 Days</b></span><span class="chev">⌄</span><select id="dateFilter"><option>Last 30 Days</option><option>Last 7 Days</option><option>Quarter to Date</option></select></label>
-        <label class="filter"><svg><use href="#i-globe"/></svg><span><small>Country / Region</small><b id="filterCountryLabel">All Regions</b></span><span class="chev">⌄</span><select id="countryFilter"><option value="ALL">All Regions</option></select></label>
-        <label class="filter"><svg><use href="#i-layers"/></svg><span><small>Content Type</small><b id="contentLabel">All Content Types</b></span><span class="chev">⌄</span><select id="contentFilter"><option>All Content Types</option><option>News</option><option>Press Releases</option><option>Social Media Posts</option><option>Reddit</option><option>Forums</option><option>Podcasts</option></select></label>
-        <label class="filter"><svg><use href="#i-database"/></svg><span><small>Source System</small><b id="filterSystemLabel">All Systems</b></span><span class="chev">⌄</span><select id="sourceFilter"><option>All Systems</option><option>Crimson</option><option>Premium Customer Tickets</option><option>Atlas</option><option>GenAI Lens</option><option>Explore Ingestion Monitor</option></select></label>
-      </div><div class="bell"><svg><use href="#i-bell"/></svg><i></i></div><div class="avatar">TK</div></div>
+      <div class="right-tools">
+        <div class="filters">
+          <label class="filter"><svg><use href="#i-calendar"/></svg><span><small>Date Range</small><b id="dateLabel">Last 30 Days</b></span><span class="chev">⌄</span><select id="dateFilter"><option>Last 30 Days</option><option>Last 7 Days</option><option>Quarter to Date</option></select></label>
+          <label class="filter"><svg><use href="#i-globe"/></svg><span><small>Country / Region</small><b id="filterCountryLabel">All Regions</b></span><span class="chev">⌄</span><select id="countryFilter"><option value="ALL">All Regions</option></select></label>
+          <label class="filter"><svg><use href="#i-layers"/></svg><span><small>Content Type</small><b id="contentLabel">All Content Types</b></span><span class="chev">⌄</span><select id="contentFilter"><option>All Content Types</option><option>News</option><option>Press Releases</option><option>Social Media Posts</option><option>Reddit</option><option>Forums</option><option>Podcasts</option></select></label>
+          <label class="filter"><svg><use href="#i-database"/></svg><span><small>Source System</small><b id="filterSystemLabel">All Systems</b></span><span class="chev">⌄</span><select id="sourceFilter"><option>All Systems</option><option>Crimson</option><option>Premium Customer Tickets</option><option>Atlas</option><option>GenAI Lens</option><option>Explore Ingestion Monitor</option></select></label>
+        </div>
+        <div class="bell"><svg><use href="#i-bell"/></svg><i></i></div><div class="avatar">TK</div>
+      </div>
     </header>
+
     <section class="kpi-grid" id="kpis"></section>
+
     <section class="upper-grid">
-      <article class="card map-card"><div class="card-head"><div><h2>Global Coverage Health</h2><p>Country-level coverage health score across all content types</p></div><div class="seg"><button class="active" data-mapmetric="health">Health Score</button><button data-mapmetric="opportunity">Opportunity Score</button></div></div><div id="worldMap" class="world-map"></div><div class="legend"><b>Coverage Health Score</b><span><i class="dot s1"></i> ≥ 90 <small>Strong</small></span><span><i class="dot s2"></i>70–89 <small>Good</small></span><span><i class="dot s3"></i>50–69 <small>Moderate</small></span><span><i class="dot s4"></i>30–49 <small>Thin</small></span><span><i class="dot s5"></i>&lt;30 <small>Very Thin</small></span></div><div id="selectedSummary" class="selected-summary"></div><div id="mapTooltip" class="map-tooltip"></div></article>
-      <article class="card drill-card"><div class="card-head"><div class="drill-heading"><span id="countryFlag" class="country-flag">◎</span><div><h2>Coverage Genome Drill-Down — <span id="drillName">India</span></h2><p>Content coverage, source health and demand signals by content type and language</p></div></div><button class="icon-button" title="Open score details" id="openOpportunity"><svg><use href="#i-external"/></svg></button></div><div class="drill-top"><div class="donut-wrap"><div class="donut" id="healthDonut"><svg class="health-ring" viewBox="0 0 110 110" aria-hidden="true"><circle class="ring-track" cx="55" cy="55" r="46"/><circle id="healthProgress" class="ring-progress" cx="55" cy="55" r="46"/></svg><div><b id="drillHealth">62</b><small>/100</small><span>Coverage Health</span></div></div><button class="opp-mini" id="oppMini"><svg><use href="#i-target"/></svg><span><small>Opportunity Score</small><strong id="drillOpportunity">92</strong><em>/100</em></span></button></div><div class="content-table-wrap"><table><thead><tr><th>Content Type</th><th>Coverage</th><th>Sources</th><th>Unhealthy</th><th>Demand Signal</th></tr></thead><tbody id="contentRows"></tbody></table></div></div><div class="languages"><div class="lang-title"><svg><use href="#i-language"/></svg><b>Language Coverage (<span id="langCountry">India</span>)</b></div><div id="languageChips"></div></div></article>
+      <article class="card map-card">
+        <div class="card-head"><div><h2>Global Coverage Health</h2><p>Country-level coverage health score across all content types</p></div><div class="seg"><button class="active" data-mapmetric="health">Health Score</button><button data-mapmetric="opportunity">Opportunity Score</button></div></div>
+        <div id="worldMap" class="world-map"></div>
+        <div class="legend"><b>Coverage Health Score</b><span><i class="dot s1"></i> ≥ 90 <small>Strong</small></span><span><i class="dot s2"></i>70–89 <small>Good</small></span><span><i class="dot s3"></i>50–69 <small>Moderate</small></span><span><i class="dot s4"></i>30–49 <small>Thin</small></span><span><i class="dot s5"></i>&lt;30 <small>Very Thin</small></span></div>
+        <div id="selectedSummary" class="selected-summary"></div>
+        <div id="mapTooltip" class="map-tooltip"></div>
+      </article>
+
+      <article class="card drill-card">
+        <div class="card-head"><div class="drill-heading"><span id="countryFlag" class="country-flag">◎</span><div><h2>Coverage Genome Drill-Down — <span id="drillName">India</span></h2><p>Content coverage, source health and demand signals by content type and language</p></div></div><button class="icon-button" title="Open score details" id="openOpportunity"><svg><use href="#i-external"/></svg></button></div>
+        <div class="drill-top">
+          <div class="donut-wrap"><div class="donut" id="healthDonut"><svg class="health-ring" viewBox="0 0 110 110" aria-hidden="true"><circle class="ring-track" cx="55" cy="55" r="46"/><circle id="healthProgress" class="ring-progress" cx="55" cy="55" r="46"/></svg><div><b id="drillHealth">62</b><small>/100</small><span>Coverage Health</span></div></div><button class="opp-mini" id="oppMini"><svg><use href="#i-target"/></svg><span><small>Opportunity Score</small><strong id="drillOpportunity">92</strong><em>/100</em></span></button></div>
+          <div class="content-table-wrap"><table><thead><tr><th>Content Type</th><th>Coverage</th><th>Sources</th><th>Unhealthy</th><th>Demand Signal</th></tr></thead><tbody id="contentRows"></tbody></table></div>
+        </div>
+        <div class="languages"><div class="lang-title"><svg><use href="#i-language"/></svg><b>Language Coverage (<span id="langCountry">India</span>)</b></div><div id="languageChips"></div></div>
+      </article>
     </section>
+
     <section class="lower-grid">
-      <article class="card queue-card"><div class="card-head"><div><h2>Priority Source Fix Queue</h2><p>Top sources to investigate and fix, based on demand, health and commercial impact</p></div></div><div class="table-scroll queue-scroll"><table><thead><tr><th>#</th><th>Source</th><th>Country</th><th>Content Type</th><th>Reason</th><th>Demand ARR</th><th>Source System</th><th>Opportunity</th></tr></thead><tbody id="queueRows"></tbody></table></div></article>
-      <article class="card inputs-card"><div class="card-head"><div><h2>Demand & Source Intelligence Inputs</h2><p>Signals from across Meltwater systems, unified for coverage intelligence</p></div></div><div class="inputs-flow"><svg class="flow-lines" viewBox="0 0 470 240" preserveAspectRatio="none"><defs><marker id="arrowHead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#149fa1"/></marker></defs><path d="M294 23 C335 23 350 76 407 96"/><path d="M294 69 C340 69 356 93 407 105"/><path d="M294 115 C348 115 365 115 407 115"/><path d="M294 161 C340 161 356 137 407 125"/><path d="M294 207 C335 207 350 154 407 134"/></svg><div class="inputs-list"><button data-system="Crimson"><span class="input-icon purple"><svg><use href="#i-database"/></svg></span><span><b>Crimson</b><small>Content support tickets + ARR-weighted demand</small></span></button><button data-system="Premium Customer Tickets"><span class="input-icon teal"><svg><use href="#i-users"/></svg></span><span><b>Premium Customer Tickets</b><small>Premium tickets + source requests</small></span></button><button data-system="Atlas"><span class="input-icon teal"><svg><use href="#i-layers"/></svg></span><span><b>Atlas</b><small>Source master + broken / unhealthy sources</small></span></button><button data-system="GenAI Lens"><span class="input-icon purple"><svg><use href="#i-spark"/></svg></span><span><b>GenAI Lens</b><small>Cited sources + coverage demand</small></span></button><button data-system="Explore Ingestion Monitor"><span class="input-icon teal"><svg><use href="#i-chart"/></svg></span><span><b>Explore Ingestion Monitor</b><small>Sources that recently stopped generating articles</small></span></button></div><button class="hub" id="hubButton"><svg><use href="#i-chart"/></svg><b>Coverage<br>Intelligence</b></button></div></article>
-      <article class="card ranking-card"><div class="card-head"><div><h2>Thin-Result Country Ranking <svg class="inline-info"><use href="#i-info"/></svg></h2><p>Average MW Trend Center results and zero-result categories</p></div></div><div class="table-scroll ranking-scroll"><table><thead><tr><th>#</th><th>Country / Region</th><th>Avg. Result Count</th><th>Low (&lt;50)</th><th>Zero-Result Categories</th></tr></thead><tbody id="rankingRows"></tbody></table></div></article>
+      <article class="card queue-card">
+        <div class="card-head"><div><h2>Priority Source Fix Queue</h2><p>Top sources to investigate and fix, based on demand, health and commercial impact</p></div></div>
+        <div class="table-scroll queue-scroll"><table><thead><tr><th>#</th><th>Source</th><th>Country</th><th>Content Type</th><th>Reason</th><th>Demand ARR</th><th>Source System</th><th>Opportunity</th></tr></thead><tbody id="queueRows"></tbody></table></div>
+      </article>
+
+      <article class="card inputs-card">
+        <div class="card-head"><div><h2>Demand & Source Intelligence Inputs</h2><p>Signals from across Meltwater systems, unified for coverage intelligence</p></div></div>
+        <div class="inputs-flow">
+          <svg class="flow-lines" viewBox="0 0 470 240" preserveAspectRatio="none"><defs><marker id="arrowHead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#149fa1"/></marker></defs><path d="M294 23 C335 23 350 76 407 96"/><path d="M294 69 C340 69 356 93 407 105"/><path d="M294 115 C348 115 365 115 407 115"/><path d="M294 161 C340 161 356 137 407 125"/><path d="M294 207 C335 207 350 154 407 134"/></svg>
+          <div class="inputs-list">
+            <button data-system="Crimson"><span class="input-icon purple"><svg><use href="#i-database"/></svg></span><span><b>Crimson</b><small>Content support tickets + ARR-weighted demand</small></span></button>
+            <button data-system="Premium Customer Tickets"><span class="input-icon teal"><svg><use href="#i-users"/></svg></span><span><b>Premium Customer Tickets</b><small>Premium tickets + source requests</small></span></button>
+            <button data-system="Atlas"><span class="input-icon teal"><svg><use href="#i-layers"/></svg></span><span><b>Atlas</b><small>Source master + broken / unhealthy sources</small></span></button>
+            <button data-system="GenAI Lens"><span class="input-icon purple"><svg><use href="#i-spark"/></svg></span><span><b>GenAI Lens</b><small>Cited sources + coverage demand</small></span></button>
+            <button data-system="Explore Ingestion Monitor"><span class="input-icon teal"><svg><use href="#i-chart"/></svg></span><span><b>Explore Ingestion Monitor</b><small>Sources that recently stopped generating articles</small></span></button>
+          </div>
+          <button class="hub" id="hubButton"><svg><use href="#i-chart"/></svg><b>Coverage<br>Intelligence</b></button>
+        </div>
+      </article>
+
+      <article class="card ranking-card">
+        <div class="card-head"><div><h2>Thin-Result Country Ranking <svg class="inline-info"><use href="#i-info"/></svg></h2><p>Average MW Trend Center results and zero-result categories</p></div></div>
+        <div class="table-scroll ranking-scroll"><table><thead><tr><th>#</th><th>Country / Region</th><th>Avg. Result Count</th><th>Low (&lt;50)</th><th>Zero-Result Categories</th></tr></thead><tbody id="rankingRows"></tbody></table></div>
+      </article>
     </section>
   </main>
 </div>
