@@ -1,0 +1,278 @@
+{
+  "scenarios": [
+    {
+      "gapId": "GAP-IN-TAM-SOC-AUTO-0307",
+      "country": "India",
+      "iso": "IND",
+      "region": "South Asia",
+      "language": "Tamil",
+      "channel": "Social Media",
+      "category": "Automotive",
+      "phase1": {
+        "health": 62,
+        "opportunity": 92,
+        "unhealthy": 445,
+        "thinDemand": 246,
+        "genai": 318,
+        "premium": 12,
+        "arr": 780000
+      },
+      "projected": {
+        "healthAfter": 79,
+        "newArticlesMonthly": 5300,
+        "zeroThinReduction": 52,
+        "arrAddressed": 620000
+      },
+      "candidates": [
+        {
+          "id": "ATT",
+          "rank": 1,
+          "name": "Auto Talks Tamil",
+          "domain": "youtube.com/@AutoTalksTamil",
+          "url": "https://www.youtube.com/@AutoTalksTamil",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 96,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Strong Tamil automotive fit with original reviews and locally relevant vehicle content.",
+          "factors": {
+            "Authority & Credibility": 95,
+            "Coverage Gap Relevance": 99,
+            "Unique Content Value": 94,
+            "Customer & Commercial Demand": 95,
+            "GenAI / Product Evidence": 93,
+            "Content Volume & Freshness": 96,
+            "Ingestion Feasibility": 94
+          },
+          "evidence": [
+            "Tamil-first automotive channel",
+            "Strong local vehicle coverage",
+            "High gap relevance"
+          ],
+          "lift": 8,
+          "confidence": 97
+        },
+        {
+          "id": "MWG",
+          "rank": 2,
+          "name": "MotoWagon",
+          "domain": "youtube.com/@motowagon",
+          "url": "https://www.youtube.com/@motowagon",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "FIX",
+          "score": 94,
+          "atlas": "Existing — unhealthy in demo snapshot",
+          "reason": "Authoritative Tamil automotive source already represented in the source master; SourceScout avoids duplicate induction and routes the health issue to Source Doctor.",
+          "factors": {
+            "Authority & Credibility": 95,
+            "Coverage Gap Relevance": 98,
+            "Unique Content Value": 93,
+            "Customer & Commercial Demand": 94,
+            "GenAI / Product Evidence": 91,
+            "Content Volume & Freshness": 94,
+            "Ingestion Feasibility": 90
+          },
+          "evidence": [
+            "Public Tamil automotive channel",
+            "Existing-source signal prevents duplicate induction",
+            "Canonical Source Doctor handoff"
+          ],
+          "lift": 7,
+          "confidence": 96
+        },
+        {
+          "id": "ATTM",
+          "rank": 3,
+          "name": "AutoTrend Tamil",
+          "domain": "youtube.com/@AutoTrendTamil",
+          "url": "https://www.youtube.com/results?search_query=AutoTrend+Tamil",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 93,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "High topical relevance and local-language value for the selected blind spot.",
+          "factors": {
+            "Authority & Credibility": 91,
+            "Coverage Gap Relevance": 98,
+            "Unique Content Value": 91,
+            "Customer & Commercial Demand": 92,
+            "GenAI / Product Evidence": 90,
+            "Content Volume & Freshness": 92,
+            "Ingestion Feasibility": 93
+          },
+          "evidence": [
+            "Tamil automotive focus",
+            "Local-market relevance",
+            "Adds source diversity"
+          ],
+          "lift": 6,
+          "confidence": 95
+        },
+        {
+          "id": "BMT",
+          "rank": 4,
+          "name": "BiN's MoTor Tamil",
+          "domain": "youtube.com",
+          "url": "https://www.youtube.com/results?search_query=BiN%27s+MoTor+Tamil",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 91,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Original Tamil automotive creator content improves local-language and creator coverage.",
+          "factors": {
+            "Authority & Credibility": 89,
+            "Coverage Gap Relevance": 96,
+            "Unique Content Value": 94,
+            "Customer & Commercial Demand": 89,
+            "GenAI / Product Evidence": 86,
+            "Content Volume & Freshness": 90,
+            "Ingestion Feasibility": 92
+          },
+          "evidence": [
+            "Original creator-led content",
+            "Tamil language fit",
+            "Automotive-specific coverage"
+          ],
+          "lift": 5,
+          "confidence": 93
+        },
+        {
+          "id": "TTM",
+          "rank": 5,
+          "name": "Thanthi TV Motor",
+          "domain": "youtube.com/@ThanthiTV",
+          "url": "https://www.youtube.com/@ThanthiTV",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 90,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Publisher-brand authority plus Tamil reach make this a useful automotive vertical candidate.",
+          "factors": {
+            "Authority & Credibility": 96,
+            "Coverage Gap Relevance": 91,
+            "Unique Content Value": 84,
+            "Customer & Commercial Demand": 90,
+            "GenAI / Product Evidence": 88,
+            "Content Volume & Freshness": 95,
+            "Ingestion Feasibility": 87
+          },
+          "evidence": [
+            "Established Tamil publisher brand",
+            "High reach and freshness",
+            "Useful automotive vertical evidence"
+          ],
+          "lift": 4,
+          "confidence": 92
+        },
+        {
+          "id": "DRV",
+          "rank": 6,
+          "name": "DriveVlog",
+          "domain": "youtube.com",
+          "url": "https://www.youtube.com/results?search_query=DriveVlog+Tamil",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "ADD",
+          "score": 88,
+          "atlas": "Not found in demo Atlas snapshot",
+          "reason": "Useful Tamil automotive creator candidate with strong gap relevance.",
+          "factors": {
+            "Authority & Credibility": 84,
+            "Coverage Gap Relevance": 94,
+            "Unique Content Value": 91,
+            "Customer & Commercial Demand": 84,
+            "GenAI / Product Evidence": 82,
+            "Content Volume & Freshness": 89,
+            "Ingestion Feasibility": 91
+          },
+          "evidence": [
+            "Tamil automotive creator",
+            "Original vehicle content",
+            "Good ingestion feasibility"
+          ],
+          "lift": 4,
+          "confidence": 90
+        },
+        {
+          "id": "TAM",
+          "rank": 7,
+          "name": "Tamil Automobiles",
+          "domain": "youtube.com",
+          "url": "https://www.youtube.com/results?search_query=Tamil+Automobiles",
+          "location": "India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "Automotive",
+          "action": "WATCH",
+          "score": 80,
+          "atlas": "Unknown in demo snapshot",
+          "reason": "Relevant candidate, but evidence quality and publishing continuity need more validation.",
+          "factors": {
+            "Authority & Credibility": 75,
+            "Coverage Gap Relevance": 91,
+            "Unique Content Value": 82,
+            "Customer & Commercial Demand": 75,
+            "GenAI / Product Evidence": 76,
+            "Content Volume & Freshness": 74,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "Topical relevance confirmed",
+            "Needs continuity validation",
+            "Watch before induction"
+          ],
+          "lift": 2,
+          "confidence": 81
+        },
+        {
+          "id": "HTY",
+          "rank": 8,
+          "name": "Hindu Tamil Thisai — YouTube",
+          "domain": "youtube.com/@HinduTamilThisai",
+          "url": "https://www.youtube.com/@HinduTamilThisai",
+          "location": "Tamil Nadu, India",
+          "language": "Tamil",
+          "channel": "Social Media",
+          "category": "News / Automotive",
+          "action": "WATCH",
+          "score": 78,
+          "atlas": "Unknown in demo snapshot",
+          "reason": "Strong publisher authority but automotive specificity is lower than dedicated candidates.",
+          "factors": {
+            "Authority & Credibility": 96,
+            "Coverage Gap Relevance": 72,
+            "Unique Content Value": 76,
+            "Customer & Commercial Demand": 78,
+            "GenAI / Product Evidence": 83,
+            "Content Volume & Freshness": 94,
+            "Ingestion Feasibility": 88
+          },
+          "evidence": [
+            "Established Tamil publisher",
+            "High freshness",
+            "Lower automotive specificity"
+          ],
+          "lift": 2,
+          "confidence": 84
+        }
+      ]
+    }
+  ]
+}
