@@ -1,0 +1,3 @@
+# CoverageOS
+
+Repository initialization test.
