@@ -4,127 +4,119 @@
   <img src="shared/coverageos-logo.png" alt="CoverageOS logo" width="210" />
 </p>
 
-<p align="center"><strong>AI-powered global coverage intelligence and self-healing for Meltwater's content ecosystem.</strong></p>
+# CoverageOS
 
-CoverageOS is a five-phase hackathon prototype that turns content coverage from a reactive source-maintenance problem into a proactive, measurable and continuously improving intelligence workflow.
+An AI plus human layer that watches the health and completeness of our content supply chain. It finds blind spots before customers do, ranks what to fix first, repairs sources, and proves the result.
 
-> **Core idea:** Every Meltwater insight is only as complete as the content Meltwater captures. CoverageOS detects blind spots, discovers authoritative missing sources, diagnoses unhealthy existing sources, governs uncertain fixes with human review, and translates coverage recovery into product and business impact.
+**Live demo:** https://thangaperumal-mw.github.io/CoverageOS/
 
-## Why it matters
+> Meltwater hackathon prototype. Every internal value (Atlas state, ARR, tickets, scores, impact, revenue) is illustrative or modeled and is **not** Meltwater production data. Only the Trends Center evidence and public source identities are real, and the interface tags each figure so a reader always knows which is which.
 
-A coverage gap in a country, language, channel or source can propagate into thin Explore results, weaker Trends signals, incomplete Analyze outputs, missed media-relations intelligence, lower-confidence GenAI/MCP evidence, and recurring support tickets. CoverageOS treats those symptoms as one connected coverage-supply-chain problem.
+![CoverageOS overview](docs/img/00-overview.jpg)
 
-## Five-phase pipeline
+## The idea
 
-| Phase | Purpose | Output |
+Meltwater's capabilities only know what Meltwater ingests. A missing, stale or broken source is invisible until a customer notices, and then it shows up in Explore, Trends, Analyze, Media Relations, GenAI Lens and MCP all at once.
+
+CoverageOS closes the loop: **detect, prioritize, discover, diagnose, repair, human review, verify, measure, learn.**
+
+## Five phases, one gap
+
+The demo follows a single case, `GAP-IN-TAM-SOC-AUTO-0307` (India, Tamil, social media, automotive), through every phase. The same Gap ID is carried end to end.
+
+| Phase | Question it answers | Key mechanics |
 |---|---|---|
-| **Coverage Intelligence** | Detect and prioritize weak coverage using health, demand and commercial signals | Persistent Gap ID + priority |
-| **SourceScout** | Discover and rank real authoritative candidate sources | ADD / FIX / WATCH / REJECT |
-| **Source Doctor** | Diagnose unhealthy existing sources with an 8-cause engine | Auto-fix / HITL / escalation |
-| **Human-in-the-Loop** | Govern ambiguous or manual actions and capture structured decisions | Verified action + AI learning record |
-| **Product & Revenue Impact** | Translate coverage recovery into product, AI, operational and financial outcomes | Executive impact model |
+| **1. Coverage Intelligence** | Where are we weak, and what should we fix first? | Interactive world map, Coverage Health Score, 7-weight Opportunity Score, drill-down to the blind spot |
+| **2. SourceScout** | Which source should we add, fix, watch or reject? | 7-factor ranking, Atlas de-duplication, ADD / FIX / WATCH / REJECT, projected lift |
+| **3. Source Doctor** | What is broken, and what is the safest repair? | 8-cause diagnostic engine, auto-fix gates, five routes, repair lifecycle |
+| **4. Human-in-the-Loop** | Which cases need a person, and what do we learn? | Impact-ordered queue, six decision actions, structured learning records |
+| **5. Product & Revenue Impact** | What value did better coverage create? | Before and after, product impact map, MCP evidence, operations, modeled revenue |
 
-The canonical demo journey follows `GAP-IN-TAM-SOC-AUTO-0307` across all five phases.
+| | |
+|---|---|
+| ![Coverage Intelligence](docs/img/01-coverage-intelligence.jpg) | ![SourceScout](docs/img/02-sourcescout.jpg) |
+| ![Source Doctor](docs/img/03-source-doctor.jpg) | ![Human-in-the-Loop](docs/img/04-human-in-the-loop.jpg) |
 
-## Demo storyline
+## Try it in three minutes
 
-```text
-Coverage Intelligence
-        ↓
-India · Tamil · Social Media · Automotive blind spot
-        ↓
-SourceScout ranks real public candidates
-        ↓
-Existing unhealthy source → Source Doctor
-        ↓
-8-cause diagnosis + recommended repair
-        ↓
-HITL approval / Atlas + Nitro operational context
-        ↓
-Verified recovery
-        ↓
-Explore · Trends · Analyze · Media Relations · GenAI Lens · MCP impact
-        ↓
-Support reduction · ARR protection · expansion opportunity · modeled ROI
-```
+1. **Overview.** Watch the Gap ID travel through the five phases, then choose **Start the guided demo**.
+2. **Phase 1.** Click Finland (very thin), then India. Choose **Automotive** in the coverage genome to open the blind spot.
+3. **Phase 2.** MotoWagon is a FIX: it already exists but is unhealthy, so it is routed to repair instead of a duplicate ADD.
+4. **Phase 3.** Article discovery failure at 88% confidence. Two auto-fix gates are not met, so a person reviews it.
+5. **Phase 4.** Choose **Approve fix** and **Capture decision** to create a structured learning record.
+6. **Phase 5.** Compare before and after, click a capability on the impact map, and read the modeled revenue.
 
-## Run the prototype
+A fuller presenter guide is in [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md).
 
-The app uses local JSON, so serve the repository with a small HTTP server instead of opening the HTML files directly.
+## Run locally
+
+The site is plain HTML, CSS and JavaScript with no build step. Pages fetch JSON, so serve the folder rather than opening files directly.
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open:
+Then open <http://localhost:8080>. Launchers are included: `start_windows.bat` and `start_mac_linux.sh`.
+
+## Publish on GitHub Pages
+
+1. Push this folder to the `main` branch.
+2. In the repository, open **Settings, Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and the `/ (root)` folder, then save.
+4. After a minute the site is live at `https://<user>.github.io/CoverageOS/`.
+
+All paths are relative, so the site works on a Pages project URL. `.nojekyll` is included so files are served as they are.
+
+## Repository layout
 
 ```text
-http://localhost:8080
-```
-
-Convenience launchers are also included:
-
-- Windows: `start_windows.bat`
-- macOS/Linux: `start_mac_linux.sh`
-
-## Repository map
-
-```text
-CoverageOS/
-├── index.html                    # Entry point → Coverage Intelligence
-├── phase1/                       # Coverage Intelligence
-├── phase2/                       # SourceScout
-├── phase3/                       # Source Doctor
-├── phase4/                       # Human-in-the-Loop
-├── phase5/                       # Product & Revenue Impact
-├── data/
-│   └── pipeline.json             # Canonical cross-phase demo contract
-├── shared/                       # CoverageOS + Meltwater visual assets
-├── docs/
-│   ├── PROJECT_HANDOVER.md       # Complete LLM/developer handover
-│   ├── ARCHITECTURE.md           # Technical/product architecture
-│   ├── DATA_AND_SCORING.md       # Scoring and data discipline
-│   ├── DEMO_GUIDE.md             # Judge walkthrough
-│   └── PROJECT_STRUCTURE.md      # File and continuation guide
-└── README.md
+index.html                 Overview and entry point
+data/pipeline.json         Canonical data contract for all phases
+shared/                    Design system (styles.css), app shell, landing script, favicon
+phase1/ ... phase5/        One folder per phase: index.html and app.js
+phase1/data/               country-data.json and world.geojson for the map
+docs/                      HANDOVER.md, DEMO_SCRIPT.md, DATA_MODEL.md, screenshots
+scripts/validate.mjs       Checks the data contract and links
+.github/workflows/         CI that runs the validation on every push
 ```
 
 ## Data discipline
 
-The prototype intentionally separates public facts from modeled Meltwater intelligence.
+| Real or supplied | Modeled |
+|---|---|
+| Trends Center results for ten countries | Atlas state, ARR, ticket counts |
+| Public source names and domains | SourceScout scores and confidence |
+| The workflow context | Diagnostic evidence and recovery |
+| | Coverage lift, product impact, revenue and ROI |
 
-**Real/public:** source names, domains/URLs, public channels, languages and geographies used in SourceScout/Source Doctor.
+Never present modeled values as measured. Use "modeled", "prototype" or "illustrative". Details are in [docs/DATA_MODEL.md](docs/DATA_MODEL.md).
 
-**Prototype/modelled:** Atlas/Nitro states, ARR exposure, internal ticket counts, diagnostic evidence, confidence, projected coverage lift, downstream product impact, operational savings and revenue/ROI figures.
+## Validate
 
-No credentials, customer-identifying raw data or production exports are stored in this repository.
+```bash
+node scripts/validate.mjs
+```
 
-## Executive outcome model
+The script checks that weights sum to 100, every score equals its weighted factors, Doctor routes follow from the gates, the numbers reconcile across all five phases, and every relative link resolves. It runs automatically in CI.
 
-The final phase demonstrates how targeted coverage improvement can compound across Meltwater products:
+## Design
 
-- **Explore:** more relevant content and fewer thin-result experiences
-- **Trends:** stronger regional/topic confidence
-- **Analyze:** greater dataset completeness
-- **Media Relations:** richer outlet/journalist intelligence
-- **GenAI Lens:** stronger cited-source coverage
-- **MCP:** broader, fresher and more authoritative evidence
-- **Operations:** fewer content/premium-source tickets and less manual investigation
-- **Business:** modeled ARR protection, expansion opportunity and operational efficiency
+Meltwater-style light theme: Meltwater teal `#28BBBB` as the anchor, dark teal `#1C7070` for text and actions, and orange and yellow reserved for risk and priority. Poppins is used as the approved digital stand-in for GT Walsheim. Headlines use sentence case. Tuned for roughly 90% browser zoom, with keyboard focus, reduced-motion support and a responsive layout.
 
-Prototype portfolio illustration: **$6.8M modeled business impact** and **8.4× modeled Coverage ROI**. These are demo projections, not reported Meltwater financial results.
+The CoverageOS mark is a placeholder. Official Meltwater logo files should be added by the brand owner and used under the brand guidelines.
 
-## Documentation
+## Working on this project
 
-Start with:
-
-1. [Project handover](docs/PROJECT_HANDOVER.md) — the complete project context.
-2. [Architecture](docs/ARCHITECTURE.md) — how the five phases connect.
-3. [Data & scoring](docs/DATA_AND_SCORING.md) — scoring models and evidence boundaries.
-4. [Judge demo guide](docs/DEMO_GUIDE.md) — concise presentation path.
-5. [Project structure](docs/PROJECT_STRUCTURE.md) — implementation and continuation notes.
+- Keep the five-phase architecture, phase names and the persistent Gap ID unless the project owner changes them.
+- Keep SourceScout (which source) and Source Doctor (what is broken) separate.
+- Keep HITL as a structured learning-data layer, not a ticket list.
+- Change numbers in `data/pipeline.json`, then run `node scripts/validate.mjs`.
+- Do not fabricate internal states, ARR, tickets or impact as fact. If a workflow detail is unverified, say so.
 
 ## Status
+
+Prototype built for a Meltwater internal hackathon. Concepts considered for later: Coverage Diversity Index, Source Value Score, Content Black Holes, Source Twin, MCP and Trend Coverage Guards, Live Event Coverage Booster, and a Ticket-to-Signal loop. See [docs/HANDOVER.md](docs/HANDOVER.md).
+
 
 **Hackathon prototype — complete five-phase integrated demo.**
 
